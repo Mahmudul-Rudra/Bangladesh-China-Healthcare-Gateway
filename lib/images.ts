@@ -1,0 +1,28 @@
+/** Every photo on the site, with English and Bangla descriptions for screen readers. Files live in /public/img. */
+export const IMAGES = {
+  "hero-kunming": { en: "Kunming at golden hour, Dianchi lake and the city beneath green hills", bn: "সোনালি আলোয় কুনমিং, দিয়ানচি হ্রদ ও পাহাড়ের নিচে শহর" },
+  "arch-guide": { en: "A Bangladeshi guide walking an elderly father through a hospital corridor in China", bn: "চীনের হাসপাতালের করিডোরে বয়স্ক বাবাকে পথ দেখাচ্ছেন বাংলাদেশি গাইড" },
+  "arch-stay": { en: "A calm apartment room with a prayer mat by the window", bn: "জানালার পাশে জায়নামাজসহ শান্ত একটি ঘর" },
+  "arch-halal": { en: "A halal meal of rice, soup, greens and fruit on a hospital tray", bn: "হাসপাতালের ট্রেতে ভাত, স্যুপ, সবজি ও ফলের হালাল খাবার" },
+  "chat-meal": { en: "Photo of a delivered lunch box with rice, chicken and vegetables", bn: "পৌঁছে যাওয়া লাঞ্চ বক্সের ছবি: ভাত, মুরগি ও সবজি" },
+  "chat-ward": { en: "A mother's hand in her son's hand while a nurse tucks in the blanket", bn: "নার্স কম্বল ঠিক করছেন, মায়ের হাত ছেলের হাতে" },
+  "stage-before": { en: "A son photographing his father's medical reports at home in Dhaka", bn: "ঢাকার বাসায় বাবার মেডিকেল রিপোর্টের ছবি তুলছেন ছেলে" },
+  "stage-journey": { en: "A family at the airport, the mother in a wheelchair", bn: "বিমানবন্দরে একটি পরিবার, মা হুইলচেয়ারে" },
+  "stage-china": { en: "A Chinese nurse checking the drip of a Bangladeshi patient, her husband beside her", bn: "বাংলাদেশি রোগীর স্যালাইন দেখছেন চীনা নার্স, পাশে স্বামী" },
+  "stage-home": { en: "A family at home on a video call with a doctor in China", bn: "বাসায় পরিবার, চীনের ডাক্তারের সঙ্গে ভিডিও কলে" },
+  "day-0530": { en: "Fajr prayer at dawn by the window", bn: "ভোরে জানালার পাশে ফজরের নামাজ" },
+  "day-0830": { en: "The guide walking a couple to the hospital entrance", bn: "গাইড দম্পতিকে হাসপাতালের প্রবেশপথে নিয়ে যাচ্ছেন" },
+  "day-0930": { en: "A doctor explaining on a tablet while an interpreter translates", bn: "ট্যাবলেটে ব্যাখ্যা করছেন ডাক্তার, অনুবাদ করছেন দোভাষী" },
+  "day-1230": { en: "A halal lunch bag delivered at the ward door", bn: "ওয়ার্ডের দরজায় হালাল খাবারের ব্যাগ পৌঁছে দেওয়া হচ্ছে" },
+  "day-1330": { en: "The guide collecting medicine at the hospital pharmacy", bn: "হাসপাতালের ফার্মেসি থেকে ওষুধ নিচ্ছেন গাইড" },
+  "day-1700": { en: "A video call home from the hospital lounge", bn: "হাসপাতালের লাউঞ্জ থেকে বাড়িতে ভিডিও কল" },
+  "day-1900": { en: "A family sharing dinner in the apartment", bn: "অ্যাপার্টমেন্টে পরিবারের রাতের খাবার" },
+  "day-2100": { en: "A quiet hospital room at night", bn: "রাতের শান্ত হাসপাতালের ঘর" },
+  "city-kunming": { en: "Kunming lakeside with a pavilion and willows", bn: "কুনমিংয়ের হ্রদের পাড়ে প্যাভিলিয়ন ও উইলো গাছ" },
+  "city-guangzhou": { en: "Guangzhou skyline over the Pearl River at dusk", bn: "সন্ধ্যায় পার্ল নদীর ওপর গুয়াংজুর আকাশরেখা" },
+  "city-beijing": { en: "Beijing rooftops at sunrise with the skyline behind", bn: "সূর্যোদয়ে বেইজিংয়ের পুরোনো ছাদ ও আধুনিক শহর" },
+  "city-shanghai": { en: "Shanghai riverside at sunrise", bn: "সূর্যোদয়ে সাংহাইয়ের নদীর পাড়" },
+} as const;
+
+export type ImageName = keyof typeof IMAGES;
+export const imgSrc = (name: ImageName, w: 800 | 1600 = 1600) => `/img/${name}-${w}.webp`;
