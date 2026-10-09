@@ -44,6 +44,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     // suppressHydrationWarning: browser extensions (WOT, launchers, password managers) add attributes
     // to <html> and <body> before React loads. This ignores those attribute differences on these two tags only.
     <html lang="en" className={`${newsreader.variable} ${figtree.variable} ${bnSerif.variable} ${bnSans.variable} ${glyphs.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Applies the visitor's saved theme before the page paints, so there is no flash. */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("gw-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}` }} />
+      </head>
       <body suppressHydrationWarning>
         <LangProvider>
           <a className="skip" href="#main"><T en="Skip to content" bn="মূল অংশে যান" /></a>

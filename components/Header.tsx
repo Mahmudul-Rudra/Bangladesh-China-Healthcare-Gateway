@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { NAV, SITE } from "@/lib/site";
 import { T, useLang } from "@/lib/i18n";
 import { Logo } from "./Icons";
+import ThemeDial from "./ThemeDial";
 
 export default function Header() {
   const pathname = usePathname();
@@ -50,6 +51,7 @@ export default function Header() {
           <button type="button" aria-pressed={lang === "en"} onClick={() => lang !== "en" && setLang("en")}>EN</button>
           <button type="button" aria-pressed={lang === "bn"} onClick={() => lang !== "bn" && setLang("bn")}>বাংলা</button>
         </div>
+        <ThemeDial />
         <button className="menu-btn" type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="nav" onClick={() => setOpen((o) => !o)}>
           <span />
         </button>
