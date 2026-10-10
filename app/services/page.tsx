@@ -58,6 +58,17 @@ export default function Services() {
           </InView>
         ))}
       </section>
+      <section className="wrap" style={{ paddingBottom: "clamp(48px, 7vw, 96px)" }}>
+        <Link className="fc-teaser" href="/family-care/">
+          <div className="fc-teaser-photo"><Photo name="fert-consult" sizes="(max-width: 760px) 70vw, 360px" /></div>
+          <div className="fc-teaser-copy">
+            <span className="kicker"><T en="A dedicated program" bn="বিশেষ প্রোগ্রাম" /></span>
+            <h2><T en="Fertility care and IVF" bn="ফার্টিলিটি চিকিৎসা ও আইভিএফ" /></h2>
+            <p className="muted"><T en="A women-only team for the wife, private care for the husband, a cycle planner and honest numbers." bn="স্ত্রীর জন্য শুধু নারী দল, স্বামীর জন্য একান্ত যত্ন, চক্র পরিকল্পনা ও সৎ হিসাব।" /></p>
+            <span className="btn btn-teal"><T en="Open the Shapla program" bn="শাপলা প্রোগ্রাম দেখুন" /></span>
+          </div>
+        </Link>
+      </section>
       <section className="section band">
         <div className="wrap split">
           <div>

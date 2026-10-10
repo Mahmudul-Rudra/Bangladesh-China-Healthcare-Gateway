@@ -27,11 +27,23 @@ export default function InView({ children, className = "", style, threshold = 0.
       return () => cancelAnimationFrame(id);
     }
     setState("wait");
-    const io = new IntersectionObserver((es) => {
-      if (es[0].isIntersecting) { setState("in"); io.disconnect(); }
-    }, { threshold });
-    io.observe(el);
-    return () => io.disconnect();
+    // Measured from the element's box, not its visible area: elements that start fully
+    // masked (clip-path) have no visible area, so an IntersectionObserver would never fire.
+    let raf = 0;
+    const check = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const b = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const seen = Math.min(b.bottom, vh) - Math.max(b.top, 0);
+        if (seen > 0 && seen >= Math.min(b.height, vh) * threshold) { setState("in"); stop(); }
+      });
+    };
+    const stop = () => { window.removeEventListener("scroll", check); window.removeEventListener("resize", check); };
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    check();
+    return () => { cancelAnimationFrame(raf); stop(); };
   }, [threshold]);
 
   const cls = `${className}${state === "wait" ? " wait" : ""}${state === "in" ? " in" : ""}`;

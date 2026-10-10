@@ -49,8 +49,9 @@ Photo names and their descriptions (English and Bangla, for screen readers) are 
 | --- | --- |
 | WhatsApp number, email, menu links | `lib/site.ts` |
 | All text in English and Bangla (journey stops, services, FAQ, day in China) | `lib/content.ts` |
-| Colours, fonts, spacing, responsive rules | `app/globals.css` |
-| Pages | `app/page.tsx`, `app/services/`, `app/journey/`, `app/life-in-china/`, `app/prayer/`, `app/about/`, `app/contact/` |
+| Colours (light "Dawn over Dianchi" at the top, dark below it), fonts, spacing, responsive rules | `app/globals.css` |
+| Theme switch (horizon dial) | `components/ThemeDial.tsx` |
+| Pages | `app/page.tsx`, `app/services/`, `app/journey/`, `app/life-in-china/`, `app/prayer/`, `app/family-care/`, `app/about/`, `app/contact/` |
 | Header, footer, WhatsApp button | `components/Header.tsx`, `Footer.tsx`, `WhatsAppFloat.tsx` |
 | Scroll-drawn journey line and "you are here" dial | `components/Journey.tsx` |
 | Hero map | `components/HeroMap.tsx` |
@@ -63,5 +64,8 @@ Photo names and their descriptions (English and Bangla, for screen readers) are 
 | Prayer page | `app/prayer/page.tsx`, live dial and qibla in `components/PrayerLive.tsx` |
 | Prayer time and qibla calculations (Karachi method, Hanafi/Shafi'i Asr) | `lib/prayer.ts` |
 | Cities inside their Chinese names | `components/CityGlyphs.tsx` |
+| Fertility program page (Shapla), at `/family-care/` | `app/family-care/page.tsx` |
+| Fertility program text (paths, halal, ages, tests, messages) | `lib/fertility.ts` |
+| Fertility program interactive parts (two paths, privacy demo, planner, checklist, bloom) | `components/fert/` |
 
 Bangla text uses the `<T en="..." bn="..." />` component. The chosen language is remembered in the visitor's browser.

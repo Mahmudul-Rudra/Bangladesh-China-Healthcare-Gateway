@@ -3,6 +3,7 @@ import { NAV, SITE, waLink } from "@/lib/site";
 import { T } from "@/lib/i18n";
 import { Logo } from "./Icons";
 import Clock from "./Clock";
+import DcsForgeLogo from "./DcsForgeLogo";
 
 export default function Footer() {
   return (
@@ -39,6 +40,12 @@ export default function Footer() {
         <div className="disclaimer">
           <span><T en="We are a patient facilitation service, not a hospital. Diagnosis and treatment decisions are made by licensed doctors." bn="আমরা রোগী সহায়তা প্রতিষ্ঠান, হাসপাতাল নই। রোগ নির্ণয় ও চিকিৎসার সিদ্ধান্ত নেন নিবন্ধিত চিকিৎসকেরা।" /></span>
           <span>© 2026 {SITE.nameEn}</span>
+        </div>
+        <div className="credit">
+          <a href="https://dcs-forge.com" target="_blank" rel="noopener" aria-label="Crafted by DCS Forge (opens dcs-forge.com)">
+            <span><T en="Crafted by" bn="নির্মাণে" /></span>
+            <DcsForgeLogo />
+          </a>
         </div>
       </div>
     </footer>

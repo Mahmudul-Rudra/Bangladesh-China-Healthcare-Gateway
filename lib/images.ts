@@ -22,6 +22,17 @@ export const IMAGES = {
   "city-guangzhou": { en: "Guangzhou skyline over the Pearl River at dusk", bn: "সন্ধ্যায় পার্ল নদীর ওপর গুয়াংজুর আকাশরেখা" },
   "city-beijing": { en: "Beijing rooftops at sunrise with the skyline behind", bn: "সূর্যোদয়ে বেইজিংয়ের পুরোনো ছাদ ও আধুনিক শহর" },
   "city-shanghai": { en: "Shanghai riverside at sunrise", bn: "সূর্যোদয়ে সাংহাইয়ের নদীর পাড়" },
+  "fert-hero": { en: "A couple standing together by a window at dawn, hands joined", bn: "ভোরে জানালার পাশে হাত ধরে দাঁড়িয়ে এক দম্পতি" },
+  "fert-planning": { en: "A couple planning dates on a calendar at home", bn: "বাসায় ক্যালেন্ডারে তারিখ ঠিক করছেন এক দম্পতি" },
+  "fert-consult": { en: "A couple with a woman doctor and an interpreter", bn: "নারী ডাক্তার ও দোভাষীর সঙ্গে এক দম্পতি" },
+  "fert-her": { en: "A wife with a woman doctor and a woman guide", bn: "নারী ডাক্তার ও নারী গাইডের সঙ্গে স্ত্রী" },
+  "fert-him": { en: "A husband in a private consultation with a doctor", bn: "ডাক্তারের সঙ্গে একান্ত পরামর্শে স্বামী" },
+  "fert-lab": { en: "Embryologists working carefully at a microscope", bn: "মাইক্রোস্কোপে যত্নে কাজ করছেন এমব্রায়োলজিস্টরা" },
+  "fert-dua": { en: "A husband's and a wife's hands raised together in dua", bn: "স্বামী ও স্ত্রীর হাত একসঙ্গে দোয়ায় তোলা" },
+  "fert-wait": { en: "A couple waiting calmly together by a window", bn: "জানালার পাশে শান্তভাবে অপেক্ষায় এক দম্পতি" },
+  "fert-shapla": { en: "A shapla water lily opening at dawn", bn: "ভোরে ফুটতে থাকা একটি শাপলা" },
+  "fert-hope": { en: "A newborn's hand holding a mother's finger", bn: "মায়ের আঙুল ধরে আছে নবজাতকের হাত" },
+  "fert-expecting": { en: "A wife and husband by a sunny window, hopeful", bn: "রোদেলা জানালার পাশে আশাবাদী স্বামী-স্ত্রী" },
 } as const;
 
 export type ImageName = keyof typeof IMAGES;

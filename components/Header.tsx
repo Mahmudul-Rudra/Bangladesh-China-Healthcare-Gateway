@@ -42,7 +42,7 @@ export default function Header() {
         </Link>
         <nav className="nav" id="nav" aria-label="Main">
           {NAV.map((n) => (
-            <Link key={n.href} href={n.href} aria-current={isCurrent(n.href) ? "page" : undefined}>
+            <Link key={n.href} href={n.href} className={n.accent ? "nav-fc" : undefined} aria-current={isCurrent(n.href) ? "page" : undefined}>
               <T en={n.en} bn={n.bn} />
             </Link>
           ))}

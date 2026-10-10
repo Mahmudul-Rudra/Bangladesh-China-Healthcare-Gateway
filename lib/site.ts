@@ -13,12 +13,13 @@ export const waLink = (text?: string) =>
 
 export type Bi = { en: string; bn: string };
 
-export const NAV: Array<{ href: string } & Bi> = [
+export const NAV: Array<{ href: string; accent?: boolean } & Bi> = [
   { href: "/", en: "Home", bn: "হোম" },
   { href: "/services/", en: "Services", bn: "সেবাসমূহ" },
   { href: "/journey/", en: "The journey", bn: "যাত্রাপথ" },
   { href: "/life-in-china/", en: "Life in China", bn: "চীনে থাকা" },
   { href: "/prayer/", en: "Prayer", bn: "নামাজ" },
+  { href: "/family-care/", en: "Fertility", bn: "সন্তান-আশা", accent: true },
   { href: "/about/", en: "About & FAQ", bn: "আমাদের কথা" },
   { href: "/contact/", en: "Contact", bn: "যোগাযোগ" },
 ];

@@ -100,6 +100,21 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="wrap">
+          <Link className="fc-teaser" href="/family-care/">
+            <div className="fc-teaser-photo"><Photo name="fert-hero" sizes="(max-width: 760px) 70vw, 360px" /></div>
+            <div className="fc-teaser-copy">
+              <span className="kicker"><T en="The Shapla program, for couples" bn="শাপলা প্রোগ্রাম, দম্পতিদের জন্য" /></span>
+              <h2><T en="Two hearts, one hope." bn="দুই হৃদয়, এক আশা।" /></h2>
+              <p className="muted"><T en="Private fertility care and IVF in China, within your faith, with both of you cared for side by side." bn="চীনে নিভৃতে ফার্টিলিটি চিকিৎসা ও আইভিএফ, আপনাদের বিশ্বাসের মধ্যে থেকে, দুজনেরই পাশাপাশি যত্নে।" /></p>
+              <span className="btn btn-teal"><T en="See the program" bn="প্রোগ্রামটি দেখুন" /></span>
+            </div>
+            <svg className="fc-teaser-lines" viewBox="0 0 600 120" aria-hidden="true"><path d="M0 20 C 160 20, 220 100, 330 80 S 420 30, 600 60" stroke="var(--gold)" /><path d="M0 100 C 160 100, 220 20, 330 40 S 420 90, 600 60" stroke="var(--jade)" /></svg>
+          </Link>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="wrap family">
           <div className="section-head" style={{ margin: 0 }}>
             <span className="kicker"><T en="For the family at home" bn="দেশে থাকা পরিবারের জন্য" /></span>
